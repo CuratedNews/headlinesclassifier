@@ -1,7 +1,7 @@
 # Headlines Classifier
 News headlines are some of the most volatile and consumed pieces of information on the planet. We have made a headlines classifier to help users determine when headlines are junking up their content consumption ecosystem. We have also made it open-source so users can see how it works and operates. Our [dataset](https://curatednews.xyz/static/downloads/CuratedNewsDataset.zip) is open-source and freely available.
 
-Check our our [demo]()
+Check out our [demo](https://curatednews.github.io/headlinesclassifier/) and/or [codebook](https://curatednews.github.io/headlinesclassifier/CuratedNewsDatasetCodeBook.pdf)
 
 ## Usage
 
@@ -56,10 +56,10 @@ model.summary()
 ```
 
 ## How it works?
-Check our [demo]() for a hands-on with explanations
+Check our [demo](https://curatednews.github.io/headlinesclassifier/) for a hands-on with explanations
 
 ## Jupyter Notebook
-[Do it](https://raw.githubusercontent.com/CuratedNews/headlinesclassifier/main/headlinesvolatilitynotebook.ipynb) yourself
+[Do it](https://github.com/CuratedNews/headlinesclassifier/blob/main/headlinesvolatilitynotebook.ipynb) yourself
 
 ## Want to know more?
 Visit [https://curatednews.xyz](https://curatednews.xyz)
