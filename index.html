@@ -1,0 +1,184 @@
+<html lang="en" dir="ltr" data-theme="light">
+   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title>Curated News - Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Curated News' outrage evaluator allows users to determine news and content for emotional volatility.">
+    <meta name="keywords" content="news, content, media">
+    <meta name="copyright" content="Curated News">
+    <meta name="robots" content="index,nofollow">
+    <meta http-equiv="expires" content="302400">
+    <meta property="og:image" content="https://curatednews.xyz/static/images/homeogimage.png">
+    <link rel="stylesheet" nonce="" href="https://curatednews.xyz/static/css/style.css">
+    <link rel="stylesheet" nonce="" href="./static/css/fonts.css">
+    <link rel="stylesheet" nonce="" href="./static/css/style2.css">
+    <link rel="shortcut icon" type="image/jpg" href="https://curatednews.xyz/static/images/favicon.ico">
+    <script src="./static/js/tasks.js"></script>
+    <noscript><meta http-equiv="refresh" content="1;url=https://curatednews.xyz/curatednojs"></noscript>
+   </head>
+<body>
+<div class="sidebar">
+    <div class="logo-details sidebarBtn">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+      <span class="logo_name">Menu</span>
+    </div>
+      <ul class="nav-links">
+        <li id="submenu">
+          <a title="Home">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span class="links_name">Home</span>
+	    <i id="caret" class="fa fa-caret-down unrotated" aria-hidden="true"></i>
+          </a>
+        </li>
+	  <ul id="submenulink" class="menumainmargin submenu">
+		<li>
+          	  <a href="https://curatednews.xyz/index.html" title="Download">
+		  <i class="fa fa-rocket" aria-hidden="true"></i>
+            	  <span class="links_name">Download</span>
+          	  </a>
+        	</li>
+		<li>
+          	  <a href="https://curatednews.xyz/curatedprivacy" title="Privacy">
+		  <i class="fa fa-user-secret" aria-hidden="true"></i>
+            	  <span class="links_name">Privacy</span>
+          	  </a>
+        	</li>
+		<li>
+          	  <a href="https://curatednews.xyz/curatedterms" title="Terms">
+		  <i class="fa fa-gavel" aria-hidden="true"></i>
+            	  <span class="links_name">Terms</span>
+          	  </a>
+        	</li>
+		<li>
+          	  <a href="https://curatednews.xyz/curatedfaq" title="FAQ">
+		  <i class="fa fa-question" aria-hidden="true"></i>
+            	  <span class="links_name">FAQ</span>
+          	  </a>
+        	</li>
+	  </ul>
+        <li>
+          <a href="https://curatednews.xyz/curatedsearch" title="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="links_name">Search</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://curatednews.xyz/curatedheadlines" title="Headlines">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            <span class="links_name notificationbadge" badge-data="new">Headlines</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://curatednews.xyz/curatedanalytics" title="Analytics">
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+            <span class="links_name">Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://curatednews.xyz/curatedtools.php" title="Tools" class="active">
+            <i class="fa fa-wrench" aria-hidden="true"></i>
+            <span class="links_name">Tools</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://curatednews.xyz/curatedregions" title="Regions">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span class="links_name">Regions</span>
+          </a>
+        </li>
+      </ul>
+      <div id="social" class="row social" align="center">
+   	<a target="blank" href="https://www.facebook.com/theofficialcuratednews/" title="Our Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+   	<a target="blank" href="https://www.linkedin.com/company/curatednews" title="Our LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+   	<a target="blank" href="https://t.me/Curated_News" title="Our Telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+   	<a target="blank" href="https://curatednews.xyz/curatedupdates.rss" title="Our RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
+      </div>
+  </div>
+<input type="checkbox" id="darkmode">
+<section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <img src="https://curatednews.xyz/static/images/logo.png" alt="" class="logofluid bx bx-menu">
+        <span class="logomenu logomenu2">Curated Classifier</span>
+      </div>
+      <div class="search-box">
+	<div class="buttons">
+    	  <div class="model tflite">
+    	    <input id="search-input" name="term" type="text" placeholder="Evaluate headline...">
+      	    <div class="btn disabled"><button class="fa fa-exclamation-triangle bx bx-search btn disabled model tflite" aria-hidden="true"></button></div>
+      	    <div class="result"></div>
+    	  </div>
+  	</div>
+      </div>
+      <div class="loginsignup slogan">
+	      <a href="https://curatednews.xyz/curatedlogin" class="login-button sloganremoveit">Login</a>
+        <a href="https://curatednews.xyz/curatedpricing.php" class="pricing-signup-button sloganremoveit">Signup</a>
+      </div>
+    </nav>
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Negative</div>
+            <div id="negative" class="number">?</div>
+            <div class="indicator">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              <span class="text">Evaluation</span>
+            </div>
+          </div>
+          <i class="fa fa-minus statsicon two" aria-hidden="true"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Positive</div>
+            <div id="positive" class="number">?</div>
+            <div class="indicator">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              <span class="text">Evaluation</span>
+            </div>
+          </div>
+          <i class="fa fa-plus statsicon three" aria-hidden="true"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Neutral</div>
+            <div id="neutral" class="number">?</div>
+            <div class="indicator">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              <span class="text">Evaluation</span>
+            </div>
+          </div>
+          <i class="fa fa-check-square-o statsicon four" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="main-box">
+        <div class="big-box box big-box-tools">
+          <div class="classification-result"></div>
+          <br>
+          <div class="title">How it works?</div>
+          <div class="big-box-title longtext">
+            <p class="longtext">Typical text classification methodologies rely on big data. This makes sense. Real world practices sometimes require real world data. Ideal distributions don't always represent the world we live in. Many companies cannot compete with major corporations who have massive technical information collection operations in place. This is where Curated News comes in...</p>
+          </div>
+          <div class="big-box-title longtext">
+            <p class="longtext">We rely on better data. Our <a class="regular_btn" href="https://opensource.org/">open-source</a> headlines classifier, showcases our values and commitment to transparency. The <a href="https://curatednews.xyz/static/downloads/CuratedNewsDataset.zip" class="regular_btn">data</a> we used to make this model is freely available for use in accordance with the terms and conditions listed in our <a class="regular_btn" href="./CuratedNewsDatasetCodeBook.pdf">codebook</a>. Our dataset was made with the best statistical practices in mind so we could show our competitors that small data doesn't always mean limited use. That said, our dataset contains over 60,000+ observations. It is the largest open-source dataset available when it comes to news-related material.</p>
+          </div>
+          <br>
+          <div class="big-box-title longtext">
+            <p class="longtext"><pre><code>Example explanations - extreme cases that averaged out...<br><br>Example 1<br>Headline from <a class="regular_btn" href="https://nationalreview.com/">National Review</a>, <a class="regular_btn" href="https://www.nationalreview.com/2020/10/the-deeply-flawed-racism-index/">The Deeply Flawed Racism Index</a>, originally labelled negative with an overall sentiment score of -1.61<br>Text classifier score: Neutral 51%, Positive 29%, Negative 19%<br>The absence of context in this headline makes our text classifier label it neutral. This makes sense. The headline does not actually attempt to elicit an emotional reaction. It might seem volatile subjectively but objectively it does not behave like a clickbait article. It seems to peak a reader's interest naturally without becoming strictly manipulative. This means our model can diffentiate between truly volatile versus subjectively volatile news headlines.<br><br>Example 2<br>Headline from <a class="regular_btn" href="https://timesofindia.indiatimes.com/us">Times of India</a>, <a class="regular_btn" href="https://timesofindia.indiatimes.com/world/europe/over-60-dead-dozens-missing-as-severe-floods-strike-europe/articleshow/84461729.cms">Over 60 dead, dozens missing as severe floods strike Europe</a>, originally labelled negative with an overall sentiment score of -1.5<br>Text classifier score: Negative 100%<br>There can be no doubt this headline is negative. Its score reflects the immediate context and our text classifier was able to differeniate between the previous headline that had a higher original sentiment score and this one that is clearly not as subjective but which had a lower one. This headline is clickbait material. Even if the article was about floods in all of Europe, using deaths from floods that only represent a fraction of Europe is not representative. If you were European, and wanted to see if these floods affected your specific locality, you would likely feel an urge to click on it because the deaths and lack of specificity enhance your urge to click on it. Volatility is a measure of subjective intentionality from objective statements of intention.</code></pre></p>
+          </div>
+          <br>
+          <div class="big-box-title longtext">
+            <p class="longtext">Curated News is always finding new ways to ensure consumers get appropriate content consumption experiences. Content should suit your needs instead of someone's advertising model.</p>
+          </div>
+          <br>
+        </div>
+    </div>
+  </div>
+    <textarea id="textarea" name="term" type="text" placeholder="Evaluate headline..."></textarea>
+  </section>
+</body>
+<script src="./static/js/script.js"></script>
+<script src="./static/js/darkmode.js"></script>
+<script src="https://curatednews.xyz/static/js/menu.js"></script>
+<script src="https://curatednews.xyz/static/js/security.js"></script>
+</html>
