@@ -88,14 +88,15 @@
         </li>
       </ul>
       <div id="social" class="row social" align="center">
+        <a target="blank" href="https://github.com/CuratedNews" title="Our GitHub"><i class="fa fa-github-square" aria-hidden="true"></i></a>
    	<a target="blank" href="https://www.facebook.com/theofficialcuratednews/" title="Our Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-   	<a target="blank" href="https://www.linkedin.com/company/curatednews" title="Our LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+   	<a target="blank" href="https://www.linkedin.com/company/curatednews" title="Our LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a><br>
    	<a target="blank" href="https://t.me/Curated_News" title="Our Telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
    	<a target="blank" href="https://curatednews.xyz/curatedupdates.rss" title="Our RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
       </div>
   </div>
 <input type="checkbox" id="darkmode">
-<section class="home-section">
+<section id="section" class="home-section">
     <nav>
       <div class="sidebar-button">
         <img src="https://curatednews.xyz/static/images/logo.png" alt="" class="logofluid bx bx-menu">
@@ -115,70 +116,162 @@
         <a href="https://curatednews.xyz/curatedpricing.php" class="pricing-signup-button sloganremoveit">Signup</a>
       </div>
     </nav>
-    <div class="home-content">
-      <div class="overview-boxes">
+    <div id="bannermenuactual" class="bannermenubg removehighlight">
+        <div id="evaluationbutton" class="bannermenuitem"><a class="bannermenuitemlink"><i id="bannermenu" class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong class="mobileremoveit">Evaluation</strong></a></div>
+        <div id="methodologybutton" class="bannermenuitem"><a class="bannermenuitemlink"><i id="bannermenu2" class="fa fa-cogs" aria-hidden="true"></i> <strong class="mobileremoveit">Methodology</strong></a></div>
+        <div id="codebookbutton" class="bannermenuitem"><a class="bannermenuitemlink"><i id="bannermenu3" class="fa fa-table" aria-hidden="true"></i> <strong class="mobileremoveit">Codebook</strong></a></div>
+        <div id="codebutton" class="bannermenuitem"><a class="bannermenuitemlink"><i id="bannermenu4" class="fa fa-code" aria-hidden="true"></i> <strong class="mobileremoveit">Code</strong></a></div>
+      </div>
+    <div id="home-content" class="home-content">
+      <div id="evaluation" class="overview-boxes removehighlight bannermenu-margins">
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Negative</div>
+            <div class="box-topic negativeactive">Negative</div>
             <div id="negative" class="number">?</div>
             <div class="indicator">
               <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
               <span class="text">Evaluation</span>
             </div>
           </div>
-          <i class="fa fa-minus statsicon two" aria-hidden="true"></i>
+          <i class="fa fa-minus statsicon two mobileremoveit" aria-hidden="true"></i>
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Positive</div>
+            <div class="box-topic positiveactive">Positive</div>
             <div id="positive" class="number">?</div>
             <div class="indicator">
               <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
               <span class="text">Evaluation</span>
             </div>
           </div>
-          <i class="fa fa-plus statsicon three" aria-hidden="true"></i>
+          <i class="fa fa-plus statsicon three mobileremoveit" aria-hidden="true"></i>
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Neutral</div>
+            <div class="box-topic neutralactive">Neutral</div>
             <div id="neutral" class="number">?</div>
             <div class="indicator">
               <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
               <span class="text">Evaluation</span>
             </div>
           </div>
-          <i class="fa fa-check-square-o statsicon four" aria-hidden="true"></i>
+          <i class="fa fa-check-square-o statsicon four mobileremoveit" aria-hidden="true"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Open Source</div>
+            <div class="number mobileremoveit"><a href="https://github.com/curatednews" class="regular_btn bottomrainbowborder">GitHub</a></div>
+            <div class="indicator">
+              <span class="text">Better data makes everything better.</span>
+            </div>
+          </div>
+          <i class="fa fa-github statsicon github" aria-hidden="true"></i>
         </div>
       </div>
-      <div class="main-box">
+      <div id="result" class="main-box">
         <div class="big-box box big-box-tools">
+          <div id="loader">
+              <div class="dot1"></div>
+              <div class="dot2"></div>
+              <div class="dot3"></div>
+          </div>
           <div class="classification-result"></div>
           <br>
+          <div class="classification-result2"></div>
+          <br>          
+        </div>
+      </div> 
+      <div id="howheadlinesclassifierworks"> 
+      <div class="main-box bannermenu-margins">
+        <div class="big-box box big-box-tools">
           <div class="title">How it works?</div>
-          <div class="big-box-title longtext">
-            <p class="longtext">Typical text classification methodologies rely on big data. This makes sense. Real world practices sometimes require real world data. Ideal distributions don't always represent the world we live in. Many companies cannot compete with major corporations who have massive technical information collection operations in place. This is where Curated News comes in...</p>
+          <div class=" longtext">
+            <p>Typical text classification methodologies rely on big data. This makes sense. Real world practices sometimes require real world data. Ideal distributions don't always represent the world we live in. Many companies cannot compete with major corporations who have massive technical information collection operations in place. This is where Curated News comes in...</p>
           </div>
-          <div class="big-box-title longtext">
-            <p class="longtext">We rely on better data. Our <a class="regular_btn" href="https://opensource.org/">open-source</a> headlines classifier, showcases our values and commitment to transparency. The <a href="https://curatednews.xyz/static/downloads/CuratedNewsDataset.zip" class="regular_btn">data</a> we used to make this model is freely available for use in accordance with the terms and conditions listed in our <a class="regular_btn" href="./CuratedNewsDatasetCodeBook.pdf">codebook</a>. Our dataset was made with the best statistical practices in mind so we could show our competitors that small data doesn't always mean limited use. That said, our dataset contains over 60,000+ observations. It is the largest open-source dataset available when it comes to news-related material.</p>
+          <div class="longtext">
+            <p>We rely on better data. Our <a class="regular_btn" href="https://opensource.org/">open-source</a> headlines classifier, showcases our values and commitment to transparency. The <a href="https://curatednews.xyz/static/downloads/CuratedNewsDataset.zip" class="regular_btn">data</a> we used to make this model is freely available for use in accordance with the terms and conditions listed in our <a class="regular_btn" href="./CuratedNewsDatasetCodeBook.pdf">codebook</a>. Our dataset was made with the best statistical practices in mind so we could show our competitors that small data doesn't always mean limited use. That said, our dataset contains over 60,000+ observations. It is the largest open-source dataset available when it comes to quality news-related material.</p>
           </div>
-          <br>
-          <div class="big-box-title longtext">
-            <p class="longtext"><pre><code>Example explanations - extreme cases that averaged out...<br><br>Example 1<br>Headline from <a class="regular_btn" href="https://nationalreview.com/">National Review</a>, <a class="regular_btn" href="https://www.nationalreview.com/2020/10/the-deeply-flawed-racism-index/">The Deeply Flawed Racism Index</a>, originally labelled negative with an overall sentiment score of -1.61<br>Text classifier score: Neutral 51%, Positive 29%, Negative 19%<br>The absence of context in this headline makes our text classifier label it neutral. This makes sense. The headline does not actually attempt to elicit an emotional reaction. It might seem volatile subjectively but objectively it does not behave like a clickbait article. It seems to peak a reader's interest naturally without becoming strictly manipulative. This means our model can diffentiate between truly volatile versus subjectively volatile news headlines.<br><br>Example 2<br>Headline from <a class="regular_btn" href="https://timesofindia.indiatimes.com/us">Times of India</a>, <a class="regular_btn" href="https://timesofindia.indiatimes.com/world/europe/over-60-dead-dozens-missing-as-severe-floods-strike-europe/articleshow/84461729.cms">Over 60 dead, dozens missing as severe floods strike Europe</a>, originally labelled negative with an overall sentiment score of -1.5<br>Text classifier score: Negative 100%<br>There can be no doubt this headline is negative. Its score reflects the immediate context and our text classifier was able to differeniate between the previous headline that had a higher original sentiment score and this one that is clearly not as subjective but which had a lower one. This headline is clickbait material. Even if the article was about floods in all of Europe, using deaths from floods that only represent a fraction of Europe is not representative. If you were European, and wanted to see if these floods affected your specific locality, you would likely feel an urge to click on it because the deaths and lack of specificity enhance your urge to click on it. Volatility is a measure of subjective intentionality from objective statements of intention.</code></pre></p>
-          </div>
-          <br>
-          <div class="big-box-title longtext">
-            <p class="longtext">Curated News is always finding new ways to ensure consumers get appropriate content consumption experiences. Content should suit your needs instead of someone's advertising model.</p>
+          <div class="longtext">
+            <p>Curated News is always finding new ways to ensure consumers get appropriate content consumption experiences. Content should suit your needs instead of someone's advertising model.</p>
           </div>
           <br>
         </div>
     </div>
+        <br>
+        <pre><code><strong class="codetitle">Interesting extreme cases</strong><br><br>Example 1<br>Headline from <a class="regular_btn" href="https://nationalreview.com/">National Review</a>, <a class="regular_btn" href="https://www.nationalreview.com/2020/10/the-deeply-flawed-racism-index/">The Deeply Flawed Racism Index</a>, originally labelled negative with an overall sentiment score of -1.61<br>Text classifier score: Neutral 51%, Positive 29%, Negative 19%<br><br><strong class="robototext"><i class="fa fa-caret-right plus" aria-hidden="true"></i>Lack of context leads our text classifier to label it mostly neutral. This makes sense. The headline does not actually attempt to elicit an emotional reaction, even though it does seem to withhold important information. Sometimes withholding informaiton is better than adding information without context. A lack of context makes us unable to say whether negative implications were technically inferred. It also means intentionality is impossible to derive objectively. Our model errs on the side of caution to only analyze truly volatile news headlines material.</strong><br><br>Example 2<br>Headline from <a class="regular_btn" href="https://timesofindia.indiatimes.com/us">Times of India</a>, <a class="regular_btn" href="https://timesofindia.indiatimes.com/world/europe/over-60-dead-dozens-missing-as-severe-floods-strike-europe/articleshow/84461729.cms">Over 60 dead, dozens missing as severe floods strike Europe</a>, originally labelled negative with an overall sentiment score of -1.5<br>Text classifier score: Negative 100%<br><br><strong class="robototext"><i class="fa fa-caret-right plus" aria-hidden="true"></i>This headline is a negative anchor case. Our text classifier was able to differeniate between the previous headline which had a higher original sentiment score with standard sentiment analysis. From a visual inspection, this headline is also clickbait material. Even if the article contained information about floods everywhere in Europe, deaths from floods would only represent a fraction of Europe localities. If you were European, and wanted to see if these floods affected your specific locality, you would feel an urge to click on it because the deaths and lack of specificity enhance your urge to click on it. Volatility is a measure of subjective intentionality from objective statements of intention. Our negativity indicators are actually better at determining clickbait than training a model on low quality news-related material to find clickbait.</strong></code><br></pre>
+        </div>  
+    <div id="codebook" class="center">
+      <div id="codebookviewer" class="reader">
+        <iframe class="responsive-iframe readerbubble" src="CuratedNewsDatasetCodeBook.pdf" title="" allowfullscreen=""></iframe>
+      </div>
+    </div>    
+  <div id="code" class="main-box bannermenu-margins">
+    <div class="big-box box big-box-tools">
+      <pre>
+        <strong class="codetitle">Import packages</strong>
+        <code>import pandas as pd<br>from tflite_model_maker import model_spec<br>from tflite_model_maker import text_classifier<br>from tflite_model_maker.text_classifier import DataLoader
+        </code>
+      </pre>
+      <pre>  
+        <strong class="codetitle">Import dataset</strong>
+        <code>df = pd.read_csv("headlinesvolatilitydata.csv")<br>df.head(25)
+        </code>
+      </pre>
+      <pre>
+        <strong class="codetitle">Explore some data</strong>
+        <code>df['titlesentimentoverall'].value_counts()
+        </code>
+      </pre> 
+      <pre>
+        <strong class="codetitle">Set model specifications</strong>
+        <code>spec = model_spec.get('average_word_vec')
+        </code>
+      </pre>  
+      <pre>
+        <strong class="codetitle">Set parameters & train model</strong>
+        <code>train_data = DataLoader.from_csv(filename='headlinesvolatilitydata.csv', <br>text_column='title', label_column='titlesentimentoverall', <br>model_spec=spec, is_training=True)<br>model = text_classifier.create(train_data, model_spec=spec, epochs=10)
+        </code>
+      </pre> 
+      <pre>
+        <strong class="codetitle">Check model summary</strong>
+        <code>model.summary()
+        </code>
+      </pre>
+    </div>
+    <div id="sidebox" class="small-box box mobileremoveit sidebox">
+      <div class="title">Documentation</div>
+        <ul class="small-box-details">
+           <li>
+                 <a href="https://github.com/curatednews" target="_blank">
+                  <strong class="iconbg"><img src="https://github.githubassets.com/favicons/favicon.svg" alt=""></strong>
+                  <span class="product">Clone this Repo</span>
+                </a>
+           </li>
+           <li>
+                 <a href="https://www.tensorflow.org/text/guide/word_embeddings" target="_blank">
+                  <img src="https://www.gstatic.com/devrel-devsite/prod/vf835aa6b9cd89b3f27e5e46b762d88066cfe5cc51e31c466c45c27dbcd2bcca1/tensorflow/images/favicon.png" alt="">
+                  <span class="product">Word Embeddings</span>
+                </a>
+           </li>  
+    	</ul>
+    	<br>
+    	<div class="longtext"><p>*Note: This open source model was trained for speed as a proof of concept.</p><br><p>Check out our <a href="https://github.com/curatednews" class="regular_btn bottomrainbowborder">other open source contributions</a>.</p></div>
+    </div>
+  </div>
   </div>
     <textarea id="textarea" name="term" type="text" placeholder="Evaluate headline..."></textarea>
+  <footer>
+     <a class="footermenuitem"><i class="fa fa-user-secret" aria-hidden="true"></i> Privacy</a>
+     <a class="footermenuitem"><i class="fa fa-gavel" aria-hidden="true"></i> Terms & Conditions</a>
+  </footer>
+  <div class="progress-bar-container">
+        <div class="progress-bar" id="scrollprogressbar"></div>
+  </div>
   </section>
 </body>
 <script src="./static/js/script.js"></script>
 <script src="./static/js/darkmode.js"></script>
+<script src="https://curatednews.xyz/static/js/scrollbar.js"></script>
 <script src="https://curatednews.xyz/static/js/menu.js"></script>
 <script src="https://curatednews.xyz/static/js/security.js"></script>
 </html>

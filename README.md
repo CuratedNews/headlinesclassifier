@@ -5,7 +5,7 @@ Check out our [demo](https://curatednews.github.io/headlinesclassifier/) and/or 
 
 ## Usage
 
-Model available for testing purposes only [https://raw.githubusercontent.com/CuratedNews/headlinesclassifier/main/headlinesclassifier.tflite](https://raw.githubusercontent.com/CuratedNews/headlinesclassifier/main/headlinesclassifier.tflite)
+Models available for testing purposes only [https://raw.githubusercontent.com/CuratedNews/headlinesclassifier/main/headlinesclassifier.tflite](https://raw.githubusercontent.com/CuratedNews/headlinesclassifier/main/headlinesclassifier.tflite) & [https://raw.githubusercontent.com/CuratedNews/headlinesclassifier/main/headlinesclassifier2.tflite](https://raw.githubusercontent.com/CuratedNews/headlinesclassifier/main/headlinesclassifier2.tflite)
 
 ## Construction in Python
 
