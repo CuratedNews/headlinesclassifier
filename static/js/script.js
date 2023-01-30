@@ -269,6 +269,12 @@ function renderResult2(result) {
     return `${cls.score.toFixed(3)*100}%`;
   });
   let values = String(strResult2);
-  classificationResult2.innerHTML = `<div class="title">${values}</div>`;
   const scores = values.split(",");
+  const unknown = parseFloat(scores[0]).toFixed(1)+"%"
+  const academic = parseFloat(scores[1]).toFixed(1)+"%"
+  const neutral = parseFloat(scores[2]).toFixed(1)+"%"
+  const liberal = parseFloat(scores[3]).toFixed(1)+"%"
+  const conservative = parseFloat(scores[4]).toFixed(1)+"%"
+  const factchecker = parseFloat(scores[5]).toFixed(1)+"%"
+  classificationResult2.innerHTML = `<div class="pollcheckresults"><span class="pollcheckbutton unknownactive">Unknown ${unknown}</span><span class="pollcheckbutton unknownactive academicactive">Academic ${academic}</span><span class="pollcheckbutton neutralidactive">Neutral ${neutral}</span><br><br><span class="pollcheckbutton liberalidactive">Liberal ${liberal}</span><span class="pollcheckbutton conservativeidinactive">Conservative ${conservative}</span><span class="pollcheckbutton unknownactive factcheckeractive">Fact Checker ${factchecker}</span></div>`;
 }
