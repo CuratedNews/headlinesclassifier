@@ -11,29 +11,15 @@ const searchbox = document.getElementById("search-input");
 const loader = document.getElementById('loader');
 loader.style.display = 'none';
 
-const evaluation = document.getElementById('evaluation');
-const howheadlinesclassifierworks = document.getElementById('howheadlinesclassifierworks');
-const codebook = document.getElementById('codebook');
-const code = document.getElementById('code');
 const result2 = document.getElementById('result');
-const evaluationbutton = document.getElementById('evaluationbutton');
-const methodologybutton = document.getElementById('methodologybutton');
-const codebookbutton = document.getElementById('codebookbutton');
-const codebutton = document.getElementById('codebutton');
-howheadlinesclassifierworks.style.display = 'none';
-codebook.style.display = 'none';
-code.style.display = 'none';
+
+const seeforyourself = document.getElementById('seeforyourself');
+
+const learnmore = document.getElementById('learnmore');
+const previousmodal = document.getElementById('previous-modal');
+const nextclosemodal = document.getElementById('next-close-modal');
+
 result2.style.display = 'none';
-
-const codebookviewer = document.getElementById('codebookviewer');
-
-const bannermenuactual = document.getElementById('bannermenuactual');
-const bannermenu = document.getElementById('bannermenu');
-const bannermenu2 = document.getElementById('bannermenu2');
-const bannermenu3 = document.getElementById('bannermenu3');
-const bannermenu4 = document.getElementById('bannermenu4');
-bannermenuactual.style.display = 'flex';
-bannermenu.classList.add("yellowhighlight");
 
 const homecontent = document.getElementById('home-content');
 
@@ -144,57 +130,37 @@ function renderResult(result) {
   textarea.value = "";
   loader.style.display = 'none';
   isResult = true;
+  seeforyourself.style.display = 'none';
 }
 
-evaluationbutton.addEventListener("click", function(){
-  howheadlinesclassifierworks.style.display = 'none';
-  codebook.style.display = 'none';
-  evaluation.style.display = 'flex';
-  if (isResult == true){
-    result.style.display = 'flex';
-  }
-  code.style.display = 'none';
-  bannermenu.classList.add("yellowhighlight");
-  bannermenu2.classList.remove("yellowhighlight");
-  bannermenu3.classList.remove("yellowhighlight");
-  bannermenu4.classList.remove("yellowhighlight");
-});
+learnmore.addEventListener("click", function(){
+  openModal("How it works?", "Typical text classification methodologies rely on big data. This makes sense. Real world practices sometimes require real world data. Ideal distributions don't always represent the world we live in. Many companies cannot compete with major corporations who have massive technical information collection operations in place.","fa-question-circle","neutralbutton")
+  
+  previousmodal.style.display = "none";
+  
+  nextclosemodal.addEventListener("click", function(){
+  previousmodal.style.display = "inline-block";
+  nextclosemodal.style.display = "none";
+  openModal("What we do...", "We rely on better data. Our open-source headlines classifier, showcases our values and commitment to transparency. The data we used to make this model is freely available for use in accordance with the terms and conditions listed in our codebook. It is the largest open-source dataset available when it comes to quality news-related material.","fa-question-circle","neutralbutton")
 
-methodologybutton.addEventListener("click", function(){
-  howheadlinesclassifierworks.style.display = 'inline';
-  evaluation.style.display = 'none';
-  result.style.display = 'none';
-  codebook.style.display = 'none';
-  code.style.display = 'none';
-  bannermenu2.classList.add("yellowhighlight");
-  bannermenu.classList.remove("yellowhighlight");
-  bannermenu3.classList.remove("yellowhighlight");
-  bannermenu4.classList.remove("yellowhighlight");
-});
-
-codebookbutton.addEventListener("click", function(){
-  howheadlinesclassifierworks.style.display = 'none';
-  evaluation.style.display = 'none';
-  result.style.display = 'none';
-  code.style.display = 'none';
-  codebook.style.display = 'inline';
-  bannermenu3.classList.add("yellowhighlight");
-  bannermenu.classList.remove("yellowhighlight");
-  bannermenu2.classList.remove("yellowhighlight");
-  bannermenu4.classList.remove("yellowhighlight");
-  codebookviewer.style.top = "44px";
-});
-
-codebutton.addEventListener("click", function(){
-  howheadlinesclassifierworks.style.display = 'none';
-  evaluation.style.display = 'none';
-  result.style.display = 'none';
-  codebook.style.display = 'none';
-  code.style.display = 'flex';
-  bannermenu4.classList.add("yellowhighlight");
-  bannermenu.classList.remove("yellowhighlight");
-  bannermenu2.classList.remove("yellowhighlight");
-  bannermenu3.classList.remove("yellowhighlight");
+  
+  previousmodal.addEventListener("click", function(){
+  
+  openModal("How it works?", "Typical text classification methodologies rely on big data. This makes sense. Real world practices sometimes require real world data. Ideal distributions don't always represent the world we live in. Many companies cannot compete with major corporations who have massive technical information collection operations in place.","fa-question-circle","neutralbutton")
+  
+  previousmodal.style.display = "none";
+  nextclosemodal.style.display = "inline-block";
+  
+  nextclosemodal.addEventListener("click", function(){
+  
+  openModal("What we do...", "We rely on better data. Our open-source headlines classifier, showcases our values and commitment to transparency. The data we used to make this model is freely available for use in accordance with the terms and conditions listed in our codebook. It is the largest open-source dataset available when it comes to quality news-related material.","fa-question-circle","neutralbutton")
+  
+  });
+  
+  });
+  
+  });
+  
 });
 
 setupButton2(
@@ -277,4 +243,26 @@ function renderResult2(result) {
   const conservative = parseFloat(scores[4]).toFixed(1)+"%"
   const factchecker = parseFloat(scores[5]).toFixed(1)+"%"
   classificationResult2.innerHTML = `<div class="pollcheckresults"><span class="pollcheckbutton unknownactive">Unknown ${unknown}</span><span class="pollcheckbutton unknownactive academicactive">Academic ${academic}</span><span class="pollcheckbutton neutralidactive">Neutral ${neutral}</span><br><br><span class="pollcheckbutton liberalidactive">Liberal ${liberal}</span><span class="pollcheckbutton conservativeidinactive">Conservative ${conservative}</span><span class="pollcheckbutton unknownactive factcheckeractive">Fact Checker ${factchecker}</span></div>`;
+}
+
+function openModal(title, message, icon, colorclass){
+    const modal = document.getElementById("modal");
+    const closemodal = document.getElementById("close-modal");
+    const titlemodal = document.getElementById("title-modal");
+    const messagemodal = document.getElementById("message-modal");
+    titlemodal.innerHTML = `<i class='fa ${icon} ${colorclass}' aria-hidden='true'></i> ${title}`;
+    messagemodal.innerText = message;
+    modal.style.display = "block";
+    closemodal.addEventListener('click', (event) => {
+        modal.classList.add("dissolve");
+        setTimeout(function(){
+            modal.style.display = "none";
+            modal.classList.remove("dissolve");
+        },500);
+    });
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 }
